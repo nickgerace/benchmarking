@@ -19,10 +19,5 @@ tune:
 .PHONY: tune
 
 install:
-	cd $(MAKEPATH); phoronix-test-suite install build-linux-kernel
+	@cd $(MAKEPATH); ./scripts/install.sh
 .PHONY: install
-
-deps:
-	cd $(MAKEPATH); sudo pacman -S --noconfirm php
-	cd $(MAKEPATH); paru -S phoronix-test-suite
-.PHONY: deps
